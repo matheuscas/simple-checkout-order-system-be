@@ -6,8 +6,9 @@ authors = ["matheuscas <matheus.mcas@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "djangorestframework"
 psycopg2-binary = "^2.9.3"
+djangorestframework = "^3.13.1"
+Django = "^4.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

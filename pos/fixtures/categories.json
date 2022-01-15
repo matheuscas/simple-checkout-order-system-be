@@ -1,0 +1,26 @@
+[
+  {
+    "model": "pos.category",
+    "pk": "1",
+    "fields": {
+      "image_id": "f3fbf57b118fa9",
+      "name": "Bakery"
+    }
+  },
+  {
+    "model":  "pos.category",
+    "pk": "2",
+    "fields": {
+      "image_id": "b271afbefdc554",
+      "name": "Entrees"
+    }
+  },
+  {
+    "model":  "pos.category",
+    "pk": "3",
+    "fields": {
+      "image_id": "eba73b2361fae3",
+      "name": "Drinks"
+    }
+  }
+]

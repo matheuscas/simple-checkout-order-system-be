@@ -6,8 +6,21 @@ class Category(models.Model):
     name = models.CharField(max_length=100, null=False)
 
 
+class Payment(models.Model):
+    class PaymentMode(models.IntegerChoices):
+        CASH = 0
+        CREDIT_CARD = 1
+        DEBIT_CARD = 2
+
+    name = models.CharField(max_length=100, null=False)
+    email = models.EmailField(max_length=100, null=False)
+    address = models.TextField(max_length=200, null=False)
+    payment_mode = models.IntegerField(choices=PaymentMode.choices, null=False)
+
+
 class Order(models.Model):
     total = models.DecimalField(null=False, max_digits=11, decimal_places=2)
+    payment = models.OneToOneField(Payment, on_delete=models.CASCADE)
 
 
 class Item(models.Model):

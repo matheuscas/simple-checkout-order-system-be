@@ -37,7 +37,7 @@ WORKDIR /code
 COPY poetry.lock pyproject.toml /code/
 
 # install dependencies
-RUN poetry install --no-dev
+RUN poetry install
 
 # copy all
 COPY . /code/

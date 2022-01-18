@@ -15,10 +15,10 @@ like `api/v1/schema/swagger-ui` or `api/v1/schema/redoc`
 ### Loading data
 To load categories and items into database, you can execute the following commands:
 ```shell
-docker exec <container_name> loaddata categories
+docker exec <container_name> ./manage.py loaddata categories
 ```
 To load the categories and
 ```shell
-docker exec <container_name> loaddata items
+docker exec <container_name> ./manage.py loaddata items
 ```
 To load the items.

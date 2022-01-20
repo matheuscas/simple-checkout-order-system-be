@@ -5,21 +5,22 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
-from api.views import ItemsListView, OrderCreateView
+from api.views import ItemsListView, OrderCreateView, OrderListView
 
 urlpatterns = [
     path("menu", ItemsListView.as_view(), name="menu"),
     path("order", OrderCreateView.as_view(), name="order"),
-    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("orders", OrderListView.as_view(), name="orders"),
+    path("docs/", SpectacularAPIView.as_view(), name="docs"),
     # Optional UI:
     path(
-        "schema/swagger-ui/",
-        SpectacularSwaggerView.as_view(url_name="schema"),
+        "docs/swagger-ui/",
+        SpectacularSwaggerView.as_view(url_name="docs"),
         name="swagger-ui",
     ),
     path(
-        "schema/redoc/",
-        SpectacularRedocView.as_view(url_name="schema"),
+        "docs/redoc/",
+        SpectacularRedocView.as_view(url_name="docs"),
         name="redoc",
     ),
 ]

@@ -22,3 +22,11 @@ To load the categories and
 docker exec <container_name> ./manage.py loaddata items
 ```
 To load the items.
+
+Ps.: if you don't know what's you container's name, run `docker ps` and at the most right collumn the name is there. Pick the one that ends with `api`. 
+
+Now you can access http://0.0.0.0:8000/api/v1/menu check the persisted items. 
+
+## Troubleshoot 
+
+In the case of the `api` don't connect to the database, please try to run `docker-compose up --build` again or manually run the migrations using the following command: `docker exec <container_name> ./manage.py migrate`
